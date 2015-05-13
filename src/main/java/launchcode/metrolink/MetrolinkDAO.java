@@ -1,3 +1,7 @@
+package launchcode.metrolink;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -5,6 +9,7 @@ import java.util.List;
 /**
  * Created by Gaming on 5/5/2015.
  */
+@Repository
 public class MetrolinkDAO implements LaunchCodeDAO{
 
     public static final String JDBC_SQLITE_METROLINK_DB = "jdbc:sqlite:metrolink.db";

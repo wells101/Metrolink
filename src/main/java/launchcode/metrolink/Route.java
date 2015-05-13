@@ -1,13 +1,18 @@
+package launchcode.metrolink;
+
+import org.springframework.stereotype.Component;
+
 import java.time.LocalTime;
 import java.util.List;
 
 /**
  * Created by Gaming on 5/6/2015.
  */
+@Component
 public class Route {
     private List<Station> RouteStops;
     //Output list of Stations.
-    //Move to Route Object
+    //Move to launchcode.metrolink.Route Object
 
     public Route(){
         RouteStops = MetrolinkDAO.getInstance().getMetrolinkStops();

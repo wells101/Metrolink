@@ -1,12 +1,24 @@
+package launchcode.metrolink;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import java.util.Scanner;
 
 /**
  * Created by Gaming on 5/5/2015.
  */
+@Component
 public class MetrolinkApp {
+
+    @Autowired
+    static Route MetroRoute;
+
     public static void main(String[] args){
+
         Scanner inputScanner = new Scanner(System.in);
-        Route MetroRoute = new Route();
+
+        MetroRoute = new Route();
+
         int selection;
         MetroRoute.outputStations();
         do {

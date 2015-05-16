@@ -1,6 +1,8 @@
 package launchcode.metrolink;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Component;
 import java.util.Scanner;
 
@@ -14,7 +16,6 @@ public class MetrolinkApp {
     static Route MetroRoute;
 
     public static void main(String[] args){
-
         Scanner inputScanner = new Scanner(System.in);
 
         MetroRoute = new Route();

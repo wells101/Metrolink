@@ -1,26 +1,36 @@
 package launchcode.metrolink;
 
+import javax.persistence.*;
+
+import static javax.persistence.GenerationType.IDENTITY;
+
 /**
  * Created by Gaming on 5/6/2015.
  */
+@Entity
+@Table(name="stops")
 public class Station {
+    @Id
+    @GeneratedValue(strategy = IDENTITY)
+    @Column(name = "stop_id", unique = true, nullable = false)
+    private Integer ID;
 
-    private String StationName;
-    private String ID;
+    @Column(name = "stop_name", unique = false)
+    private String StopName;
 
     public void setName(String name) {
-        this.StationName = name;
+        this.StopName = name;
     }
 
-    public void setID(String ID) {
+    public void setID(Integer ID) {
         this.ID = ID;
     }
 
     public String getStationName() {
-        return StationName;
+        return StopName;
     }
 
-    public String getID() {
+    public Integer getID() {
         return ID;
     }
 }

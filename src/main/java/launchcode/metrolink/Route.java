@@ -11,8 +11,6 @@ import java.util.List;
 @Component
 public class Route {
     private List<Station> RouteStops;
-    //Output list of Stations.
-    //Move to launchcode.metrolink.Route Object
 
     public Route(){
         RouteStops = MetrolinkDAO.getInstance().getMetrolinkStops();
@@ -35,7 +33,7 @@ public class Route {
         return RouteStops.get(key - 1).getStationName();
     }
 
-    public String getStopID(int key){
+    public Integer getStopID(int key){
         return RouteStops.get(key - 1).getID();
     }
 
